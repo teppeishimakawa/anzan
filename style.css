@@ -59,7 +59,7 @@ display:block;
 margin-left: auto;
 margin-right: auto;
 text-align: center; /*align centerは親要素に設定する*/
-width:400px;
+width:330px;
 }
 
 .key
@@ -103,6 +103,7 @@ width:100px;
 height:100px;
 margin:0px 0px;
 text-align: center;
+z-index: 200;
 
 }
 
