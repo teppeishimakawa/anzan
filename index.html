@@ -5,7 +5,9 @@
 <head>
 <link href="./style.css" rel="stylesheet" type="text/css"/>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
 <title>anzan</title>
 <style>
 </style>
@@ -34,25 +36,25 @@
 <br>
 <div class="key_all">
   <div>
-  <button  class="key green" id="seven" value="7" onclick= ontouchstart="">7</button>
-  <button  class="key green" id="eight" value="8"  ontouchstart="">8</button>
-  <button  class="key green" id="nine" value="9"  ontouchstart="">9</button>
+  <button  class="key green" id="seven" value="7" >7</button>
+  <button  class="key green" id="eight" value="8"  >8</button>
+  <button  class="key green" id="nine" value="9"  >9</button>
   </div>
   <div>
-  <button  class="key green" id="four" value="4"  ontouchstart="">4</button>
-  <button  class="key green" id="five" value="5"  ontouchstart="">5</button>
-  <button class="key green" id="six" value="6"  ontouchstart="">6</button>
+  <button  class="key green" id="four" value="4"  >4</button>
+  <button  class="key green" id="five" value="5"  >5</button>
+  <button class="key green" id="six" value="6"  >6</button>
   </div>
   <div>
-  <button class="key green" id="one" value="1"  ontouchstart="">1</button>
-  <button class="key green" id="two" value="2"  ontouchstart="">2</button>
-  <button class="key green" id="three" value="3"  ontouchstart="">3</button>
+  <button class="key green" id="one" value="1"  >1</button>
+  <button class="key green" id="two" value="2"  >2</button>
+  <button class="key green" id="three" value="3"  >3</button>
   </div>
   <div>
-  <button class="key green" id="zero" value="0"  ontouchstart="">0</button>
+  <button class="key green" id="zero" value="0" >0</button>
   </div>
   <div>
-  <button class="green" id="enter"  ontouchstart="">enter</button>
+  <button class="green" id="enter" >enter</button>
   </div>
 </div>
 
@@ -110,6 +112,7 @@ var random2=Math.floor(Math.random()*3)
 var order_num = document.getElementById("order_num");
 
 
+
 if(!mobile)
 {
 zero.addEventListener('click',edit,false);
@@ -147,8 +150,8 @@ enter.addEventListener('touchstart',result,false);
       order_num.innerHTML = order_num.innerHTML + this.value;
             if(order_num.innerHTML == (  Math.abs(new Function("return " + num_arr1[random1] + kigou[random2] + num_arr2[random1_2])())  ))
        {
-        document.getElementById("enter").className = 'green'
-       }else{document.getElementById("enter").className = 'red';}
+        //document.getElementById("enter").className = 'green'
+       }else{//document.getElementById("enter").className = 'red';}
     }
 
     function result()
@@ -247,8 +250,8 @@ function color()
 {
       if(order_num.innerHTML == (  Math.abs(new Function("return " + num_arr1[random1] + kigou[random2] + num_arr2[random1_2])())  ))
        {
-        document.getElementById("enter").className = 'green'
-       }else{document.getElementById("enter").className = 'red'}
+        //document.getElementById("enter").className = 'green'
+       }else{//document.getElementById("enter").className = 'red'}
 }
 
 

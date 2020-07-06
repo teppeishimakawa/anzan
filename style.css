@@ -132,7 +132,7 @@ top: 5%;
 right:calc(50% - 150px)
 }
 
-
+/*
 .red
 {
 transition: filter 0s;
@@ -158,3 +158,4 @@ transition: filter 0s;
 	filter: invert(8%) sepia(99%) saturate(7044%) hue-rotate(247deg) brightness(100%) contrast(145%);
    -webkit-filter: invert(8%) sepia(99%) saturate(7044%) hue-rotate(247deg) brightness(100%) contrast(145%);
 }
+*/
