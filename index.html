@@ -24,7 +24,7 @@
 <!--div id="ans"  style='position: fixed;top: 5%; right:calc(50% - 100px);  width:200px;height:70px;text-align:center;font-size: 60px;color: black'></div-->
 
 <div id="time"  style='position: fixed;top: 5%; right:0%;  width:200px;height:70px;text-align:center;font-size: 25px;color: black;' ></div>
-<div id="score" style='position: fixed;top: 20%;right:10%; width:200px;height:70px;text-align: right;font-size: 25px;color: black'></div>
+<div id="score" style='position: fixed;top: 15%;right:10%; width:200px;height:70px;text-align: right;font-size: 25px;color: black'></div>
 
 
 <br>
@@ -34,25 +34,25 @@
 <br>
 <div class="key_all">
   <div>
-  <button  class="key green" id="seven" value="7" onclick="edit(this)" ontouchstart="">7</button>
-  <button  class="key green" id="eight" value="8" onclick="edit(this)" ontouchstart="">8</button>
-  <button  class="key green" id="nine" value="9" onclick="edit(this)" ontouchstart="">9</button>
+  <button  class="key green" id="seven" value="7" onclick= ontouchstart="">7</button>
+  <button  class="key green" id="eight" value="8"  ontouchstart="">8</button>
+  <button  class="key green" id="nine" value="9"  ontouchstart="">9</button>
   </div>
   <div>
-  <button  class="key green" id="four" value="4" onclick="edit(this)" ontouchstart="">4</button>
-  <button  class="key green" id="five" value="5" onclick="edit(this)" ontouchstart="">5</button>
-  <button class="key green" id="six" value="6" onclick="edit(this)" ontouchstart="">6</button>
+  <button  class="key green" id="four" value="4"  ontouchstart="">4</button>
+  <button  class="key green" id="five" value="5"  ontouchstart="">5</button>
+  <button class="key green" id="six" value="6"  ontouchstart="">6</button>
   </div>
   <div>
-  <button class="key green" id="one" value="1" onclick="edit(this)" ontouchstart="">1</button>
-  <button class="key green" id="two" value="2" onclick="edit(this)" ontouchstart="">2</button>
-  <button class="key green" id="three" value="3" onclick="edit(this)" ontouchstart="">3</button>
+  <button class="key green" id="one" value="1"  ontouchstart="">1</button>
+  <button class="key green" id="two" value="2"  ontouchstart="">2</button>
+  <button class="key green" id="three" value="3"  ontouchstart="">3</button>
   </div>
   <div>
-  <button class="key green" id="zero" value="0" onclick="edit(this)" ontouchstart="">0</button>
+  <button class="key green" id="zero" value="0"  ontouchstart="">0</button>
   </div>
   <div>
-  <button class="green" id="enter" onclick="result()" ontouchstart="">enter</button>
+  <button class="green" id="enter"  ontouchstart="">enter</button>
   </div>
 </div>
 
@@ -101,6 +101,7 @@ var six=document.getElementById("six");
 var seven=document.getElementById("seven");
 var eigjt=document.getElementById("eight");
 var nine=document.getElementById("nine");
+var enter=document.getElementById("enter");
 
 var random1=Math.floor(Math.random()*10)
 var random1_2=Math.floor(Math.random()*10)
@@ -110,12 +111,26 @@ var order_num = document.getElementById("order_num");
 
 
 
+zero.addEventListener('click',edit,false);
+one.addEventListener('click',edit,false);
+two.addEventListener('click',edit,false);
+three.addEventListener('click',edit,false);
+four.addEventListener('click',edit,false);
+five.addEventListener('click',edit,false);
+six.addEventListener('click',edit,false);
+seven.addEventListener('click',edit,false);
+eight.addEventListener('click',edit,false);
+nine.addEventListener('click',edit,false);
+enter.addEventListener('click',result,false);
 
 
 
-    function edit(elem)
+
+
+
+    function edit(e)
     {
-      order_num.innerHTML = order_num.innerHTML + elem.value;
+      order_num.innerHTML = order_num.innerHTML + this.value;
             if(order_num.innerHTML == (  Math.abs(new Function("return " + num_arr1[random1] + kigou[random2] + num_arr2[random1_2])())  ))
        {
         document.getElementById("enter").className = 'green'
