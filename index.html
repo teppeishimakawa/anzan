@@ -23,12 +23,10 @@
 
 <!--div id="ans"  style='position: fixed;top: 5%; right:calc(50% - 100px);  width:200px;height:70px;text-align:center;font-size: 60px;color: black'></div-->
 
-<div id="time"  style='position: fixed;top: 5%; right:0%;  width:200px;height:70px;text-align:center;font-size: 25px;color: black'></div>
+<div id="time"  style='position: fixed;top: 5%; right:0%;  width:200px;height:70px;text-align:center;font-size: 25px;color: black;' ></div>
 <div id="score" style='position: fixed;top: 20%;right:10%; width:200px;height:70px;text-align: right;font-size: 25px;color: black'></div>
 
-<br>
-<br>
-<br>
+
 <br>
 <br>
 <br>
@@ -53,15 +51,11 @@
   <div>
   <button class="key green" id="zero" value="0" onclick="edit(this)" ontouchstart="">0</button>
   </div>
-  <br>
-  <br>
   <div>
   <button class="green" id="enter" onclick="result()" ontouchstart="">enter</button>
   </div>
 </div>
 
-<br>
-<br>
 <div class="btn_all">
     <button class="green" id="stt">start</button>
     <button class="green" id="reload">reload</button>
@@ -91,7 +85,7 @@ var msg;
 
 var num_arr1=[0,1,2,3,4,5,6,7,8,9]
 var num_arr2=[0,1,2,3,4,5,6,7,8,9]
-var comment_arr=["&nbsp;&nbsp;&nbsp;足して！","&nbsp;&nbsp;&nbsp;足して！","&nbsp;&nbsp;&nbsp;掛けて！"]
+var comment_arr=["&nbsp;&nbsp;足して！","&nbsp;&nbsp;足して！","&nbsp;&nbsp;掛けて！"]
 //↓配列の値に四則演算子を使うとエラー出たため。
 var kigou=["+","+","*"]
 

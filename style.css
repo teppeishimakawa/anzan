@@ -2,7 +2,7 @@
 
 body, div, p,img
    {
-    font: 400 20px/22px Roboto,sans-serif;
+    font: 22px 'Lucida Grande', Helvetica, Arial, sans-serif;
     user-select: none; /* CSS3 */
     -moz-user-select: none; /* Firefox */
     -webkit-user-select: none; /* Safari、Chromeなど */
@@ -81,7 +81,8 @@ margin-left:-215px
 display:inline;
 width:200px;
 margin: 5px 0px;
-padding: 15px;
+padding: 25px 0px 25px 0px;
+margin:0px 0px 20px 0px;
 pointer-events: none;
 z-index: 100;
 }
@@ -93,7 +94,7 @@ z-index: 100;
 #order_num
 {
   position: absolute;
-    top: 20%;
+    top: 3%;
   right: 0;
   bottom: 0;
   left: 0;
@@ -103,14 +104,14 @@ width:100px;
 height:100px;
 margin:0px 0px;
 text-align: center;
-z-index: 200;
+z-index: 101;
 
 }
 
 #order_comment
 {
   position: absolute;
-    top: 70%;
+    top: 65%;
   right: 0;
   bottom: 0;
   left: 0;
