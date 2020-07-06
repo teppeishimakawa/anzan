@@ -64,7 +64,7 @@
 
 <script>
 
-/*
+
 function isMobile()
 {
   const isAndroid = /Android/i.test(navigator.userAgent);
@@ -73,7 +73,7 @@ function isMobile()
 }
 
 const mobile = isMobile();
-*/
+
 
 
 var flg=0;
@@ -110,7 +110,8 @@ var random2=Math.floor(Math.random()*3)
 var order_num = document.getElementById("order_num");
 
 
-
+if(!mobile)
+{
 zero.addEventListener('click',edit,false);
 one.addEventListener('click',edit,false);
 two.addEventListener('click',edit,false);
@@ -122,7 +123,20 @@ seven.addEventListener('click',edit,false);
 eight.addEventListener('click',edit,false);
 nine.addEventListener('click',edit,false);
 enter.addEventListener('click',result,false);
-
+}else
+{
+zero.addEventListener('touchstart',edit,false);
+one.addEventListener('touchstart',edit,false);
+two.addEventListener('touchstart',edit,false);
+three.addEventListener('touchstart',edit,false);
+four.addEventListener('touchstart',edit,false);
+five.addEventListener('touchstart',edit,false);
+six.addEventListener('touchstart',edit,false);
+seven.addEventListener('touchstart',edit,false);
+eight.addEventListener('touchstart',edit,false);
+nine.addEventListener('touchstart',edit,false);
+enter.addEventListener('touchstart',result,false);
+}
 
 
 
