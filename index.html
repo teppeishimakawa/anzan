@@ -112,7 +112,7 @@ var random2=Math.floor(Math.random()*3)
 var order_num = document.getElementById("order_num");
 
 
-
+//連続で高速ボタン押しした時の反応良くするために{passive: true}超重要！
 if(!mobile)
 {
 zero.addEventListener('click',edit,{passive: true});
@@ -150,9 +150,8 @@ enter.addEventListener('touchstart',result,{passive: true});
       order_num.innerHTML = order_num.innerHTML + this.value;
             if(order_num.innerHTML == (  Math.abs(new Function("return " + num_arr1[random1] + kigou[random2] + num_arr2[random1_2])())  ))
        {
-        //document.getElementById("enter").className = 'green'
-       }else{//document.getElementById("enter").className = 'red';}
-    }
+        document.getElementById("enter").className = 'green'
+       }else{document.getElementById("enter").className = 'red';}
     }
 
     function result()
@@ -251,10 +250,10 @@ function color()
 {
       if(order_num.innerHTML == (  Math.abs(new Function("return " + num_arr1[random1] + kigou[random2] + num_arr2[random1_2])())  ))
        {
-        //document.getElementById("enter").className = 'green'
-       }else{//document.getElementById("enter").className = 'red'}
+        document.getElementById("enter").className = 'green'
+       }else{document.getElementById("enter").className = 'red'}
 }
-}
+
 
 
 function next()
