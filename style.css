@@ -128,11 +128,21 @@ margin:0px 0px;
 width:200px;
 height:100px;
 position: fixed;
-top: 5%;
+top: 8%;
 right:calc(50% - 150px)
 }
 
-/*
+#title
+{
+font: 16px 'Lucida Grande', Helvetica, Arial, sans-serif;
+display:block;
+width:300px;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+}
+
+
 .red
 {
 transition: filter 0s;
@@ -158,4 +168,3 @@ transition: filter 0s;
 	filter: invert(8%) sepia(99%) saturate(7044%) hue-rotate(247deg) brightness(100%) contrast(145%);
    -webkit-filter: invert(8%) sepia(99%) saturate(7044%) hue-rotate(247deg) brightness(100%) contrast(145%);
 }
-*/

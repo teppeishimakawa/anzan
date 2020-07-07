@@ -18,6 +18,7 @@
 
 <body oncontextmenu='return false;' oncopy='return false;'>
 <!--user-select:none,oncontextmenu='return false;' oncopy='return false;'重要！ボタン文字が選択状態になってしまう。-->
+<div id="title">フラッシュ暗算5回正解して！</div>
 <div class="order_all">
 <div class="order" id="order_num" style="visibility: hidden;"></div>
 <div id="order_comment"></div>
@@ -171,8 +172,9 @@ enter.addEventListener('touchstart',result,{passive: true});
 　　　　　function showPassage()
 　　　　　{
    　　　 PassSec++;
-   　　　 msg = 29 - (Math.floor(PassSec/100)) + ":" +  ( '00' + (100 - PassSec%100)).slice( -2 );   // 表示文作成
-   　　   document.getElementById("time").innerHTML = msg;
+   　　　 //msg = 29 - (Math.floor(PassSec/100)) + ":" +  ( '00' + (100 - PassSec%100)).slice( -2 );   // 表示文作成
+         msg = (Math.floor(PassSec/100)) + ":" +  ( '00' + (PassSec%100)).slice( -2 );
+         document.getElementById("time").innerHTML = msg;
          endChk();
 　　　　　}
 
@@ -191,10 +193,10 @@ enter.addEventListener('touchstart',result,{passive: true});
 
 function endChk()
 {
- if( (PassSec/100) >= 30)
+ if( (PassSec/100) >= 30 || cnt == 5)
   {
    stopShowing();
-   document.getElementById("time").innerHTML="0:00";
+   //document.getElementById("time").innerHTML="0:00";
    document.getElementById("score").style.color="red";
 
    document.getElementById("enter").style.pointerEvents="none"
