@@ -25,9 +25,9 @@
 </div>
 
 <!--div id="ans"  style='position: fixed;top: 5%; right:calc(50% - 100px);  width:200px;height:70px;text-align:center;font-size: 60px;color: black'></div-->
-
-<div id="time"  style='position: fixed;top: 15%; right:5%;  width:200px;height:70px;text-align:right;font-size: 15px;color: black;' ></div>
-<div id="score" style='position: fixed;bottom: 7%;right:10%; width:200px;height:70px;text-align: right;font-size: 25px;color: black'></div>
+<progress id="myProgress" value="0" max="100">0%</progress>
+<div id="time"></div>
+<div id="score"></div>
 
 
 <br>
@@ -111,6 +111,18 @@ var random1_2=Math.floor(Math.random()*10)
 var random2=Math.floor(Math.random()*3)
 
 var order_num = document.getElementById("order_num");
+
+
+
+
+  // プログレスバーの進捗値
+  var val;
+  // 一定間隔で処理を行うintervalのIDを保持
+  var intervalID;
+
+
+
+
 
 
 //連続で高速ボタン押しした時の反応良くするために{passive: true}超重要！
@@ -234,6 +246,9 @@ document.getElementById("stt").addEventListener("click", () =>
     {
 
     }
+        val = 0;
+    // 50msおきにプログレスバーを更新する
+    intervalID = setInterval("updateProgress()", 300);
 });
 
 
@@ -306,6 +321,23 @@ function NGnext()
 }
 
 
+
+
+  // プログレスバーを更新する
+  function updateProgress()
+  {
+    // プログレスバーの進捗値を更新し、プログレスバーに反映させる
+    val += 1;
+    document.getElementById("myProgress").value = val;
+    document.getElementById("myProgress").innerText = val + "%";
+    console.log("progress:", val, "%");
+
+    // 最大値まで達したら終了
+    if (val == 100)
+    {
+      clearInterval(intervalID);
+    }
+  }
 
 
 
