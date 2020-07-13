@@ -35,14 +35,13 @@ var intervalID;
 
 
 
-function isMobile()
+const mobile = function isMobile()
 {
   const isAndroid = /Android/i.test(navigator.userAgent);
   const isiOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
   return isAndroid || isiOS;
 }
 
-const mobile = isMobile();
 
 
 
@@ -190,7 +189,7 @@ export function click()
 
     }
         val = 0;
-    // 300msおきにプログレスバーを更新する
+    // 300msおきにプログレスバーを更新する。30秒で100%
     intervalID = setInterval(updateProgress, 300);
 }
 
