@@ -67,9 +67,27 @@
 
 <script type="module">
 
-import {zero,one,two,three,four,five,six,seven,eight,nine,enter,mobile} from "./index.js";
+var zero=document.getElementById("zero");
+var one=document.getElementById("one");
+var two=document.getElementById("two");
+var three=document.getElementById("three");
+var four=document.getElementById("four");
+var five=document.getElementById("five");
+var six=document.getElementById("six");
+var seven=document.getElementById("seven");
+var eight=document.getElementById("eight");
+var nine=document.getElementById("nine");
+
+/*
+import * as Module from "./index.js"; でexportを全て取得し、
+Module.zero, Module.click()という使い方も可
+*/
+
+
+import {enter} from "./index.js";
 import {click,edit,result} from "./index.js";
 
+import {mobile} from "./mobile.js";
 
 //連続で高速ボタン押しした時の反応良くするために{passive: true}超重要！
 if(!mobile)

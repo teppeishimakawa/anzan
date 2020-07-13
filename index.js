@@ -4,28 +4,18 @@ var cnt=0;
 var PassSec;
 var PassageID;
 
+
 var num_arr1=[0,1,2,3,4,5,6,7,8,9]
 var num_arr2=[0,1,2,3,4,5,6,7,8,9]
 var comment_arr=["&nbsp;&nbsp;足して！","&nbsp;&nbsp;足して！","&nbsp;&nbsp;掛けて！"]
 //↓配列の値に四則演算子を使うとエラー出たため。
 var kigou=["+","+","*"]
 
-var zero=document.getElementById("zero");
-var one=document.getElementById("one");
-var two=document.getElementById("two");
-var three=document.getElementById("three");
-var four=document.getElementById("four");
-var five=document.getElementById("five");
-var six=document.getElementById("six");
-var seven=document.getElementById("seven");
-var eight=document.getElementById("eight");
-var nine=document.getElementById("nine");
-var enter=document.getElementById("enter");
 
+var enter=document.getElementById("enter");
 var random1=Math.floor(Math.random()*10)
 var random1_2=Math.floor(Math.random()*10)
 var random2=Math.floor(Math.random()*3)
-
 var order_num = document.getElementById("order_num");
 
 // プログレスバーの進捗値
@@ -35,18 +25,7 @@ var intervalID;
 
 
 
-const mobile = function isMobile()
-{
-  const isAndroid = /Android/i.test(navigator.userAgent);
-  const isiOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-  return isAndroid || isiOS;
-}
-
-
-
-
-export {zero,one,two,three,four,five,six,seven,eight,nine,enter,mobile};
-
+export {enter};
 
 
 
@@ -182,7 +161,6 @@ export function click()
       setTimeout(function(){document.getElementById("order_num").innerHTML=num_arr2[random1_2];},800)
       setTimeout(function(){document.getElementById("order_num").innerHTML="";},1300)
       setTimeout(function(){document.getElementById("order_comment").innerHTML=comment_arr[random2];},1600)
-
       document.getElementById("enter").style.pointerEvents="auto"
     }else
     {
